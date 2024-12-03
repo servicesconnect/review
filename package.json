@@ -8,7 +8,7 @@
     "stop": "pm2 stop all",
     "delete": "pm2 delete all",
     "dev": "nodemon -r tsconfig-paths/register src/app.ts | pino-pretty -c",
-    "build": "tsc --order tsconfig.json && tsc-alias -p tsconfig.json && ts-node config/copyAssets.ts",
+    "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
     "test": "jest --runInBand --detectOpenHandles --forceExit"
   },
   "keywords": [],
@@ -30,6 +30,7 @@
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
     "lodash": "^4.17.21",
+    "mongoose": "^8.8.3",
     "pg": "^8.13.1",
     "pino-pretty": "^11.3.0",
     "typescript": "^5.6.3",
